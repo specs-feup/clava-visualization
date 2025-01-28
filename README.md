@@ -1,4 +1,4 @@
-# LARA Visualization Tool
+# Clava Visualization Tool
 
 Clava integration of LARA's web tool for visualization and analysis of the AST and its source code.
 
@@ -6,10 +6,16 @@ For more details, see the [LARA Framework repository](https://github.com/specs-f
 
 ## Usage
 
-To launch or update the visualization tool, execute the following statements:
+Before using the tool, you must include the respective NPM package to your project:
+
+```bash
+npm install @specs-feup/clava-visualization
+```
+
+To launch or update the visualization tool, execute the following statements in your script:
 
 ```js
-import VisualizationTool from "clava-js/api/visualization/VisualizationTool.js";
+import VisualizationTool from "@specs-feup/clava-visualization/api/VisualizationTool.js";
 
 await VisualizationTool.visualize();
 ```
