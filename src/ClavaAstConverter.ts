@@ -1,9 +1,9 @@
-import { LaraJoinPoint } from "lara-js/api/LaraJoinPoint.js";
-import GenericAstConverter, { FilesCode } from "lara-js/api/visualization/GenericAstConverter.js";
-import ToolJoinPoint, { JoinPointInfo } from "lara-js/api/visualization/public/js/ToolJoinPoint.js";
-import { AccessSpecifier, AdjustedType, Body, BoolLiteral, Break, Call, Case, Class, Comment, Continue, Decl, Declarator, DeclStmt, DeleteExpr, EnumDecl, EnumeratorDecl, Expression, ExprStmt, FileJp, FloatLiteral, FunctionJp, GotoStmt, If, Include, IntLiteral, Joinpoint, Literal, Loop, Marker, NamedDecl, Omp, Pragma, Program, RecordJp, ReturnStmt, Scope, Statement, Switch, Tag, Type, TypedefDecl, Vardecl, Varref, WrapperStmt } from "../Joinpoints.js";
-import Clava from "../clava/Clava.js";
-import { addIdentation, escapeHtml, getNodeCodeTags, getSyntaxHighlightTags } from "lara-js/api/visualization/AstConverterUtils.js"
+import { LaraJoinPoint } from "@specs-feup/lara/api/LaraJoinPoint.js";
+import GenericAstConverter, { FilesCode } from "@specs-feup/lara-visualization/api/GenericAstConverter.js";
+import ToolJoinPoint, { JoinPointInfo } from "@specs-feup/lara-visualization/api/public/js/ToolJoinPoint.js";
+import { AccessSpecifier, AdjustedType, Body, BoolLiteral, Break, Call, Case, Class, Comment, Continue, Decl, Declarator, DeclStmt, DeleteExpr, EnumDecl, EnumeratorDecl, Expression, ExprStmt, FileJp, FloatLiteral, FunctionJp, GotoStmt, If, Include, IntLiteral, Joinpoint, Literal, Loop, Marker, NamedDecl, Omp, Pragma, Program, RecordJp, ReturnStmt, Scope, Statement, Switch, Tag, Type, TypedefDecl, Vardecl, Varref, WrapperStmt } from "@specs-feup/clava/api/Joinpoints.js";
+import Clava from "@specs-feup/clava/api/clava/Clava.js";
+import { addIdentation, escapeHtml, getNodeCodeTags, getSyntaxHighlightTags } from "@specs-feup/lara-visualization/api/AstConverterUtils.js"
 
 /**
  * @brief Intermediate AST representation, used to store the (processed) code of each node.

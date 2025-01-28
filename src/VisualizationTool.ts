@@ -1,5 +1,5 @@
-import GenericAstConverter from 'lara-js/api/visualization/GenericAstConverter.js';
-import GenericVisualizationTool from 'lara-js/api/visualization/GenericVisualizationTool.js'
+import GenericAstConverter from '@specs-feup/lara-visualization/api/GenericAstConverter.js';
+import GenericVisualizationTool from '@specs-feup/lara-visualization/api/GenericVisualizationTool.js'
 import ClavaAstConverter from './ClavaAstConverter.js';
 
 export class VisualizationTool extends GenericVisualizationTool {
