@@ -1,9 +1,22 @@
 {
   "name": "@specs-feup/clava-visualization",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "author": "Bruno Oliveira",
   "description": "Clava implementation of the LARA package for visualization of the mapping between source code and AST",
   "type": "module",
+  "files": [
+    "api",
+    "src",
+    ".gitignore",
+    "jest.config.js",
+    "LICENSE",
+    "package-lock.json",
+    "package.json",
+    "README.md",
+    "tsconfig.jest.json",
+    "tsconfig.json",
+    "typedoc.config.js"
+  ],
   "scripts": {
     "build": "tsc",
     "build:watch": "tsc --watch",
@@ -15,7 +28,7 @@
   },
   "dependencies": {
     "@specs-feup/clava": "^3.0.3",
-    "@specs-feup/lara-visualization": "^1.0.0"
+    "@specs-feup/lara-visualization": "^1.0.3"
   },
   "devDependencies": {
     "@jest/globals": "^29.7.0",
