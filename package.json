@@ -1,6 +1,6 @@
 {
   "name": "@specs-feup/clava-visualization",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Bruno Oliveira",
   "description": "Clava implementation of the LARA package for visualization of the mapping between source code and AST",
   "type": "module",
@@ -27,8 +27,8 @@
     "test:watch": "npm run test -- --watch"
   },
   "dependencies": {
-    "@specs-feup/clava": "^3.0.3",
-    "@specs-feup/lara-visualization": "^1.0.3"
+    "@specs-feup/clava": "^3.0.5",
+    "@specs-feup/lara-visualization": "^1.0.4"
   },
   "devDependencies": {
     "@jest/globals": "^29.7.0",
