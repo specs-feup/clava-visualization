@@ -57,6 +57,7 @@ import {
   escapeHtml,
   getNodeCodeTags,
   getSyntaxHighlightTags,
+  normalizeFilepath,
 } from "@specs-feup/lara-visualization/api/AstConverterUtils.js";
 
 /**
@@ -113,7 +114,7 @@ export default class ClavaAstConverter implements GenericAstConverter {
       Object.assign(info, {
         "File name": jp.name,
         "Source folder": jp.sourceFoldername,
-        "Relative path": jp.relativeFilepath,
+        "Relative path": normalizeFilepath(jp.relativeFilepath),
         "Is C++": jp.isCxx,
         "Is header file": jp.isHeader,
         "Has main": jp.hasMain,
@@ -230,7 +231,7 @@ export default class ClavaAstConverter implements GenericAstConverter {
         (nextId++).toString(),
         jp.joinPointType,
         this.getCode(jp),
-        jp.filepath,
+        normalizeFilepath(jp.filepath),
         this.getJoinPointInfo(jp),
         jp.children.map((child) => toToolJoinPoint(child))
       );
@@ -586,7 +587,7 @@ export default class ClavaAstConverter implements GenericAstConverter {
         rootCodeNode.children.map((child) => {
           const file = child.children[0];
           const fileJp = file.jp as FileJp;
-          const filepath = fileJp.filepath;
+          const filepath = normalizeFilepath(fileJp.filepath);
 
           const fileCode = child.code!; // same as file.code!
           const fileHtmlCode = escapeHtml(fileCode);
@@ -600,7 +601,7 @@ export default class ClavaAstConverter implements GenericAstConverter {
         })
       ); // Associate code with each file
     } else {
-      const filepath = (root as Joinpoint).filepath;
+      const filepath = normalizeFilepath((root as Joinpoint).filepath);
       const code = rootCodeNode.code;
       const htmlCode = code ? escapeHtml(code) : "";
       const linkedHtmlCode = this.linkCodeToAstNodes(
