@@ -2,7 +2,7 @@
 
 Clava integration of LARA's web tool for visualization and analysis of the AST and its source code.
 
-For more details, see the [LARA Framework repository](https://github.com/specs-feup/lara-framework).
+For more details, see the [LARA visualization tool repository](https://github.com/specs-feup/lara-visualization) and the [Clava repository](https://github.com/specs-feup/clava).
 
 ## Usage
 
@@ -32,3 +32,37 @@ VisualizationTool.hostname;    // hostname to which the server is listening
 ```
 
 For more details, refer to the `GenericVisualizationTool` documentation, from [LARA](https://github.com/specs-feup/lara-framework).
+
+## Development Environment
+
+To configure the development environment, firstly do the [setup described in Clava-JS](do the setup described in Clava-JS). Then, clone the visualization tool repositories:
+
+```bash
+git clone -b feature/ast-visualization https://github.com/specs-feup/lara-visualization.git
+git clone -b feature/ast-visualization https://github.com/specs-feup/clava-visualization.git
+```
+
+Edit the base folder's `package.json` to the following:
+
+```bash
+{
+  "type": "module",
+  "workspaces": [
+    "clava/Clava-JS",
+    "lara-framework/Lara-JS",
+    "lara-visualization",
+    "clava-visualization"
+  ]
+}
+```
+
+Then, execute the following commands to finish the compilation procedure:
+
+```bash
+npm install
+npm run build -w lara-visualization
+npm run build -w clava-visualization
+npm install
+```
+
+After this, you you should be able to use the tool in your project by following the instructions described in the previous section.
