@@ -35,7 +35,7 @@ For more details, refer to the `GenericVisualizationTool` documentation, from [L
 
 ## Development Environment
 
-To configure the development environment, firstly do the [setup described in Clava-JS](do the setup described in Clava-JS). Then, clone the visualization tool repositories:
+To configure the development environment, firstly do the [setup described in Clava-JS](https://github.com/specs-feup/clava/tree/master/Clava-JS#installing-dev-environment). Then, clone the visualization tool repositories:
 
 ```bash
 git clone -b feature/ast-visualization https://github.com/specs-feup/lara-visualization.git
