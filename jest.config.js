@@ -2,6 +2,16 @@ import { weaverConfig } from "@specs-feup/clava/code/WeaverConfiguration.js";
 
 const config = {
   preset: "ts-jest/presets/default-esm",
+  transform: {
+    "^.+\\.ts$": [
+      "ts-jest",
+      {
+        useESM: true,
+        tsconfig: "tsconfig.jest.json",
+      },
+    ],
+  },
+  extensionsToTreatAsEsm: [".ts"],
   testEnvironment: "@specs-feup/lara/jest/jestEnvironment.js",
   testEnvironmentOptions: {
     weaverConfig,
@@ -19,7 +29,7 @@ const config = {
   coverageProvider: "v8",
   moduleNameMapper: {
     "(.+)\\.js": "$1",
-  }
+  },
 };
 
 export default config;
