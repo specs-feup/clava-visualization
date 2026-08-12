@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "@specs-feup/clava": "^3.0.5",
-    "@specs-feup/lara-visualization": "1.0.6"
+    "@specs-feup/lara-visualization": "^1.1.0"
   },
   "devDependencies": {
     "@jest/globals": "^29.7.0",
