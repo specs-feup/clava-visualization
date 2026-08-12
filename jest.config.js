@@ -12,6 +12,9 @@ const config = {
     ],
   },
   extensionsToTreatAsEsm: [".ts"],
+  // LARA publishes its Jest helpers as TypeScript, so they also need ts-jest
+  // when resolved from node_modules in a clean CI installation.
+  transformIgnorePatterns: ["node_modules/(?!(?:@specs-feup/lara)/)"],
   testEnvironment: "@specs-feup/lara/jest/jestEnvironment.js",
   testEnvironmentOptions: {
     weaverConfig,
